@@ -1,0 +1,30 @@
+{
+  "name": "stoksnap",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "generate": "plop component",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.5",
+    "next": "13.5.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.11.0",
+    "styled-components": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/styled-components": "^5.1.29",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.6",
+    "typescript": "^5"
+  }
+}
