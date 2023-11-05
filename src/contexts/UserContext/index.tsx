@@ -19,7 +19,9 @@ interface UserContextType {
   fetchUserById: (id: number) => Promise<void>;
 }
 
-const UserContext = createContext<UserContextType | undefined>(undefined);
+export const UserContext = createContext<UserContextType | undefined>(
+  undefined
+);
 
 interface UserProviderProps {
   children: ReactNode;

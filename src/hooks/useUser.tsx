@@ -9,7 +9,6 @@ interface UserType {
 }
 
 interface UserContextType {
-  users: UserType | null;
   fetchUserById: (id: number) => Promise<void>;
 }
 
