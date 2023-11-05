@@ -5,11 +5,16 @@ import { useTheme as useThemeHook } from "@Aplication/hooks/useTheme";
 import StyledComponentsRegistry from "@Aplication/lib/registry";
 import { GlobalStyles } from "@Aplication/styles/globalStyles";
 import themes from "@Aplication/styles/theme";
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
+import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 
-const roboto = Roboto({
-  weight: ["300", "400", "700"],
+import { UserProvider } from "@Aplication/contexts/UserContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -24,10 +29,17 @@ export default function RootLayout({
     <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
       <ThemeProvider theme={themes[currentTheme]}>
         <html>
-          <body className={roboto.className}>
-            <GlobalStyles />
-            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-          </body>
+          <Head>
+            <title>StokSnap</title>
+            <link rel="icon" href="./favicon.ico" />
+          </Head>
+          <GlobalStyles />
+          <UserProvider>
+            <body className={poppins.className}>
+              <ToastContainer />
+              <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            </body>
+          </UserProvider>
         </html>
       </ThemeProvider>
     </ThemeContext.Provider>

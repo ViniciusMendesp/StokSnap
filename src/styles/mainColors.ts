@@ -4,11 +4,6 @@ const mainColors = {
     normal: "#989A9F",
     light: "#BEC0C5",
   },
-  secondary: {
-    dark: "#5B5353",
-    normal: "#796F6E",
-    light: "#968989",
-  },
   error: {
     dark: "#D12729",
     normal: "#f44336",

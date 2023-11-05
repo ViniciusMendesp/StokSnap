@@ -1,7 +1,6 @@
 import { ThemeName } from "@Aplication/styles/theme";
 import { useEffect, useState } from "react";
 
-// Funções para interagir com o localStorage
 function setStoredTheme(themeName: ThemeName) {
   window.localStorage.setItem("theme", themeName);
 }
