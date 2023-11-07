@@ -23,3 +23,5 @@ export const Title = styled.h1`
   color: ${(props) => props.theme.colors.title};
   font-size: ${font.sizes.larger};
 `;
+
+export const ContainerDropDown = styled.div``;
